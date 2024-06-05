@@ -1,0 +1,7 @@
+/* _fonts.scss */
+$font-family-main: 'Arial, sans-serif';
+
+@mixin title-big {
+  font-size: 2rem;
+  font-weight: bold;
+}

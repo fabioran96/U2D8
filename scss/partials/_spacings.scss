@@ -1,0 +1,9 @@
+/* _spacings.scss */
+@mixin padding($direction, $size) {
+    padding-#{$direction}: $size;
+  }
+  
+  @mixin margin($direction, $size) {
+    margin-#{$direction}: $size;
+  }
+  

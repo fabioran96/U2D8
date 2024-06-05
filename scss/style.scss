@@ -1,0 +1,97 @@
+/* style.scss */
+
+@import 'partials/reset';
+@import 'partials/colors';
+@import 'partials/fonts';
+@import 'partials/spacings';
+@import 'partials/buttons';
+@import 'partials/mixins';
+@import 'partials/animations';
+
+
+body {
+  font-family: $font-family-main;
+}
+
+header {
+  background-color: $color-bg-hero;
+  color: $color-text;
+  @include floating();
+  padding: 2rem;
+  
+  h1 {
+    @include title-big;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    ul {
+      display: flex;
+      list-style: none;
+      
+      li {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-bg-hero;
+  color: $color-text;
+  padding: 2rem;
+  
+  .hero-content {
+    flex: 1;
+    
+    h1 {
+      @include title-big;
+    }
+    
+    p {
+      margin-top: 1rem;
+    }
+    
+    .buttons {
+      display: flex;
+      margin-top: 2rem;
+      
+      .button {
+        margin-right: 1rem;
+        &--discover {
+          @extend .button--button1;
+        }
+        &--login {
+          @extend .button--button2;
+        }
+        &--contact {
+          @extend .button--button3;
+        }
+      }
+    }
+  }
+  
+  .hero-image {
+    flex: 1;
+    @include floating(15px, 0 4px 20px rgba(0, 0, 0, 0.2), 2px solid #fff);
+  }
+}
+
+.grid {
+  @include grid(4);
+  background-color: #fff;
+  
+  .grid-item {
+    @include floating(10px, 0 2px 10px rgba(0, 0, 0, 0.1));
+  }
+}
+
+.fade-in {
+  @include fade-in(1s, 0s, fadeIn);
+}

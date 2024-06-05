@@ -1,0 +1,18 @@
+/* _buttons.scss */
+.button {
+    @each $name, $color in (button1: $color-button1, button2: $color-button2, button3: $color-button3) {
+      &--#{$name} {
+        background-color: $color;
+        color: $color-text;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        transition: transform 0.3s;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
